@@ -24,12 +24,12 @@ Este componente define 2 datos:
 ### CSS
 * Los estilos están definidos en la seccion de <style> y usan la extencion .scss.
 * Los estilos están "scoped", lo que significa que solo se aplicarán a este componente y no afectarán a otros componentes de la aplicación donde se reutilice.
-* Se pueden modificar las variables $product-item-background-color, $product-item-border-color y $product-item-text-color, para cambiar el color del fondo, borde y texto del item de cada producto. 
+* Se pueden modificar las variables *$product-item-background-color*, *$product-item-border-color* y *$product-item-text-color*, para cambiar el color del fondo, borde y texto del item de cada producto. 
 * Los productos se muestran en una cuadrícula con un diseño responsivo. 
 * Se usa una animación de transformación al pasar el mouse sobre cada producto para indicar la interactividad.
 
 ### Notas
-* El componente depende de:
+El componente depende de:
 -    **axios**: Para hacer solicitudes HTTP a la API.
 -    **vue-lazyload**: Para cargar las imágenes de los productos de manera perezosa.
 
