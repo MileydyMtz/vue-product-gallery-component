@@ -46,7 +46,7 @@ De esta manera las imágenes que no están en la vista del usuario no se cargar�
 
 Es importante configuarar vue-lazyload en el archivo main.js:
 
-```vue
+```js
 import VueLazyload from 'vue-lazyload';
 import errorImage from './assets/error-image.png';
 import loadingImage from './assets/loading-image.gif';
