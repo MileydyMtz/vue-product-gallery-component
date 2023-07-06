@@ -107,6 +107,7 @@ La implementación de este componente se puede ver de la siguiente forma:
 
 ## Pruebas
 Las pruebas se han implementado utilizando la biblioteca vitest para correr las pruebas y @vue/test-utils para montar el componente. Además, se usa flush-promises para asegurar que todas las promesas pendientes se hayan resuelto antes de proceder y axios-mock-adapter para simular las respuestas de la API. 
+
 A continuacion se muestran las pruebas implementadas:
 * **renders properly**: Esta prueba verifica que el componente se renderiza correctamente cuando recibe una respuesta exitosa de la API. Se proporciona una respuesta ficticia que incluye dos productos. Se espera que los detalles de ambos productos aparezcan en el texto renderizado del componente.
 * **renders error message on failed request**: Esta prueba verifica que el componente muestra un mensaje de error cuando la petición a la API falla. Se configura el MockAdapter para responder con un error 500. Se espera que el mensaje de error aparezca en el texto renderizado del componente.
