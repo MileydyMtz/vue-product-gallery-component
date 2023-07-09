@@ -64,7 +64,7 @@ app.use(VueLazyload, {
 
 ## Uso del componente
 Para utilizar este componente, primero se debe descargar el archivo *ProductGallery.vue* que se encuentra dentro de *src/components* y agregarlo al proyecto donde se reutilizara. 
-Posteriormeente se debe importar en el archivo donde se utilizara, luego, puedes utilizarlo como un elemento HTML personalizado, proporcionando la URL de la API como un atributo:  
+Posteriormente se debe importar en el archivo donde se utilizara, luego, puedes utilizarlo como un elemento HTML personalizado, proporcionando la URL de la API como un atributo:  
 
 A continuacion un ejemplo:
 
