@@ -23,7 +23,7 @@ Este componente define 2 datos:
 * **products**: Guarda la respuesta de la petición a la API proporcionada.
 * **error**: Se actualiza con un mensaje de error, si ocurre un error durante la petición a la API. 
 
-### CSS
+### Estilos
 * Los estilos están definidos en la sección de <style> y usan la extensión .scss.
 * Los estilos están "scoped", lo que significa que solo se aplicarán a este componente y no afectarán a otros componentes de la aplicación donde se reutilice.
 * Se pueden modificar las variables *$product-item-background-color*, *$product-item-border-color* y *$product-item-text-color*, para cambiar el color del fondo, borde y texto del item de cada producto. 
@@ -38,7 +38,7 @@ El componente depende de:
 ### Recomendaciones sobre VueLazyLoad
 La carga perezosa puede mejorar significativamente el rendimiento al reducir la cantidad de datos que necesitan ser cargados cuando la página se carga inicialmente. 
 
-En este componente Vue, se utiliza la biblioteca vue-lazyload para implementar la carga perezosa de las imágenes de los productos:
+En este componente Vue, se utiliza la biblioteca *vue-lazyload* para implementar la carga perezosa de las imágenes de los productos:
 
 ```vue
 <img v-lazy="product.image" :alt="'Imagen del producto ' + product.name" class="product-image">
@@ -46,10 +46,11 @@ En este componente Vue, se utiliza la biblioteca vue-lazyload para implementar l
 
 De esta manera las imágenes que no están en la vista del usuario no se cargarán hasta que el usuario se desplace hasta ellas.
 
-Es importante configurar vue-lazyload en el archivo main.js:
+Es importante configurar *vue-lazyload* en el archivo main.js:
 
 ```js
 import VueLazyload from 'vue-lazyload';
+
 import errorImage from './assets/error-image.png';
 import loadingImage from './assets/loading-image.gif';
 
@@ -66,7 +67,7 @@ app.use(VueLazyload, {
 
 ## Uso del componente
 Para utilizar este componente, primero se debe descargar el archivo *ProductGallery.vue* que se encuentra dentro de *src/components* y agregarlo al proyecto donde se reutilizara. 
-Posteriormente se debe importar en el componente padre proporcionando la URL de la API como un atributo:  
+Posteriormente se debe importar en el componente padre proporcionando la URL de la API como un atributo.
 
 A continuación, un ejemplo:
 
@@ -108,7 +109,7 @@ La implementación de este componente se puede ver de la siguiente forma:
 
 
 ## Pruebas
-Las pruebas se han implementado utilizando la biblioteca vitest para correr las pruebas y @vue/test-utils para montar el componente. Además, se usa flush-promises para asegurar que todas las promesas pendientes se hayan resuelto antes de proceder y axios-mock-adapter para simular las respuestas de la API. 
+Se utiliza la biblioteca Vitest para correr las pruebas y @vue/test-utils para montar el componente. Además, se usa *flush-promises* para asegurar que todas las promesas pendientes se hayan resuelto antes de proceder y *axios-mock-adapter* para simular las respuestas de la API. 
 
 A continuación, se muestran las pruebas implementadas:
 * **renders properly**: Esta prueba verifica que el componente se renderiza correctamente cuando recibe una respuesta exitosa de la API. Se proporciona una respuesta ficticia que incluye dos productos. Se espera que los detalles de ambos productos aparezcan en el texto renderizado del componente.
